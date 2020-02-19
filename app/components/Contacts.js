@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
-import { ListItem } from 'react-native-elements';
+import { StyleSheet, Text, View, FlatList, Image, ScrollView } from 'react-native';
+import { ListItem, List } from 'react-native-elements';
 
 class Contacts extends Component {
   constructor(props) {
@@ -26,19 +26,17 @@ class Contacts extends Component {
 
   render() {
     return (
-      this.state.contacts &&
-      <FlatList
-        data={this.state.contacts}
-        style={styles.contacts}
-        renderItem={({ contact }) => (
-          <ListItem
+      <ScrollView>
+      {this.state.contacts.map((contact) => (
+        <ListItem
             title={contact.name}
             subtitle={contact.last_message.content}
+            leftAvatar={{ source: { uri: 'https://placeimg.com/640/480/any'} }}
+            bottomDivider
+            chevron
             />
-        )}
-        extraData={this.state.contacts}
-        keyExtractor={contact => contact.id}
-        />
+      ))}
+      </ScrollView>
     );
   }
 }
