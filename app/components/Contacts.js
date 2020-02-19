@@ -34,6 +34,7 @@ class Contacts extends Component {
             leftAvatar={{ source: { uri: 'https://placeimg.com/640/480/any'} }}
             bottomDivider
             chevron
+            onPress={() => this.props.navigation.navigate('Messages')}
             />
       ))}
       </ScrollView>

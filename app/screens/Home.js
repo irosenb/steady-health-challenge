@@ -18,7 +18,7 @@ class Home extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Contacts></Contacts>
+        <Contacts navigation={this.props.navigation}></Contacts>
       </View>
     );
   }
