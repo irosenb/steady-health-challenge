@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
+import Contacts from '../components/Contacts'
 
-class Home extends Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      contacts: []
+    }
   }
 
   componentDidMount() {
@@ -13,19 +18,17 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello World</Text>
+        <Contacts></Contacts>
       </View>
     );
   }
 }
 
+export default Home;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
-
-export default Home;
