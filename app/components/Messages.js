@@ -22,13 +22,13 @@ class Messages extends React.Component {
           if (item.content_type == 'text') {
             message = {
               text: item.content,
-              id: i,
+              _id: i,
               createdAt: new Date(item.timestamp * 1000),
             }
           } else if (item.content_type == 'image') {
             message = {
               image: item.content,
-              id: i,
+              _id: i,
               createdAt: new Date(item.timestamp * 1000)
             }
           }
