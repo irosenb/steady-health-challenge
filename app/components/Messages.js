@@ -55,8 +55,9 @@ class Messages extends React.Component {
   }
 
   onSend(messages = []) {
-    this.setState({
-    });
+    this.setState(previousState => ({
+      messages: GiftedChat.append(previousState.messages, messages),
+    }));
   }
 
   render() {
