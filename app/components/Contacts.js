@@ -42,25 +42,4 @@ class Contacts extends Component {
   }
 }
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  profile_image: {
-    width: 60,
-    height: 60,
-  },
-  contacts: {
-    width: '100%',
-  },
-  name: {
-    fontSize: 20,
-  },
-  contact: {
-    height: 90,
-    backgroundColor: 'red',
-  }
-})
-
 export default Contacts;
